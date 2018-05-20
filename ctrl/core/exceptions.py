@@ -1,0 +1,3 @@
+
+class CtrlError(ValueError):
+    pass
