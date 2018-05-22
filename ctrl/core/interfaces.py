@@ -12,3 +12,9 @@ class ICtrlApp(Interface):
 
     def setup():
         pass
+
+
+class IListener(Interface):
+
+    def listen():
+        pass
