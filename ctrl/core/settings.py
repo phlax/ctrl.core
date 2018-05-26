@@ -26,6 +26,12 @@ class Section(object):
     def __getitem__(self, k):
         return self.section[k]
 
+    def __contains__(self, k):
+        return k in self.section
+
+    def get(self, k, default=None):
+        return self.section.get(k, default)
+
     def getlist(self, k):
         return self[k].split('\n')
 
@@ -47,3 +53,9 @@ class Settings(object):
 
     def __contains__(self, k):
         return k in self.config.sections()
+
+    def __iter__(self):
+        return iter(self.config.sections())
+
+    def __get(self, k, default=None):
+        return self.section.get(k, default)
