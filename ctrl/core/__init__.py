@@ -1,9 +1,10 @@
 
 from zope import component
 
-from .interfaces import ICtrlApp
+from .interfaces import IApp, ISettings
+from .app import App
+from .settings import Settings
 
-from .app import CtrlApp
 
-
-component.provideUtility(CtrlApp(), ICtrlApp)
+component.provideUtility(Settings(), ISettings)
+component.provideUtility(App(), IApp)

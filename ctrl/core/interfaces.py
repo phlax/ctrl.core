@@ -2,15 +2,19 @@
 from zope.interface import Interface
 
 
-class ICtrlExtension(Interface):
+class ISettings(Interface):
+    pass
 
-    def register():
+
+class IApp(Interface):
+
+    def setup():
         pass
 
 
-class ICtrlApp(Interface):
+class ICtrlExtension(Interface):
 
-    def setup():
+    def register():
         pass
 
 
