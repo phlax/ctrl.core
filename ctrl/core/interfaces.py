@@ -24,6 +24,12 @@ class IListener(Interface):
         pass
 
 
+class IVPNctl(Interface):
+
+    def listen():
+        pass
+
+
 class ISystemctl(Interface):
 
     async def start(service):
