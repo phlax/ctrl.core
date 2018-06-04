@@ -1,8 +1,11 @@
 
+import os
 from collections import OrderedDict
 from configparser import ConfigParser
 
-import os
+from zope import interface
+
+from .interfaces import ISettings
 
 # move/get rid of this
 DEFAULTS = dict(
@@ -36,6 +39,7 @@ class Section(object):
         return self[k].split('\n')
 
 
+@interface.implementer(ISettings)
 class Settings(object):
 
     def __init__(self):
