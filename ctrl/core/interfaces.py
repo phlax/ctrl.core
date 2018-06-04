@@ -100,3 +100,23 @@ class ICommandRunner(Interface):
 
 class IShell(Interface):
     pass
+
+
+class ICloudctl(Interface):
+
+    async def boot():
+        pass
+
+    async def shutdown():
+        pass
+
+    async def status(name=None):
+        pass
+
+
+class ICloudProvider(Interface):
+    pass
+
+
+class ICloudSettings(Interface):
+    pass
