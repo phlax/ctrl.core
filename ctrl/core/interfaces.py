@@ -18,6 +18,18 @@ class ICtrlExtension(Interface):
         pass
 
 
+class IDatactl(Interface):
+
+    async def list_dbs():
+        pass
+
+    async def create_db():
+        pass
+
+    async def drop_db():
+        pass
+
+
 class IListener(Interface):
 
     def listen():
