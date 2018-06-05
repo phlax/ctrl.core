@@ -36,6 +36,10 @@ class IListener(Interface):
         pass
 
 
+class IVPNListener(IListener):
+    pass
+
+
 class IVPNctl(Interface):
 
     def listen():
