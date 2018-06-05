@@ -124,3 +124,7 @@ class ICloudProvider(Interface):
 
 class ICloudSettings(Interface):
     pass
+
+
+class IFetch(Interface):
+    pass
