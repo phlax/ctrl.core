@@ -22,7 +22,6 @@ class App(object):
 
     def discover(self, modules):
         for dotted_name in modules:
-            print('Discovering: %s' % dotted_name)
             resolve('%s.extension' % dotted_name)
 
     def initialize(self, settings_file='/etc/controller.conf', modules=None):
